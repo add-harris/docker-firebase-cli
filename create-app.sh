@@ -10,6 +10,8 @@ cat output.txt
 ## Extract App Id from output and write to file
 cat output.txt | grep "App ID:" | awk '{print $NF}' > appID.txt
 
+cat appID.txt
+
 APP_ID=`cat appID.txt`
 
 firebase apps:sdkconfig -o appConfig.txt WEB $APP_ID
